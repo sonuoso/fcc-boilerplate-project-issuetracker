@@ -83,9 +83,6 @@ module.exports = function (app) {
       }
 
       Issue.find(issueQuery).then(function (data) {
-        for (let i = 0; i < data.length; i++) {
-          data[i].updated_on = new Date();
-        }
         res.send(data);
       });
     })
